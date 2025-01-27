@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../header.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../footer.css">
+</head>
+<body>
+    <header id="head">
+        <div class="left-head">
+            <h3>Exclusive</h3>
+        </div>
+        <div class="mid-head">
+            <ul>
+                <li> <a href="../index.css">Home</a></li>
+                <li> <a href="#">Contact</a></li>
+                <li> <a href="../about/about.html">About</a></li>
+                <li> <a href="../signUp/SignUp.html">SignUp</a></li>
+                <li> <a href="../product.html">Products</a></li>
+            </ul>
+        </div>
+        <div class="right-head">
+            <div class="what-look">
+                <a href="#">
+                    <input type="text" placeholder="What are you looking for ?" class="searchBtn">
+                    <img src="../photos/search-interface-symbol.png" alt="search" class="searchimg">
+                </a>
+            </div>
+            <div class="cartAndLike">
+            <a href="#"><img src="../photos/shopping-cart.png" alt="add cart" class="lov-cart"></a>
+            </div>
+        </div>
+        <div class="menu">
+            <img src="../photos/menu.png" alt="menu icon" class="menu-icon">
+        </div>
+    </header>
+
+        <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="login()">Login</button>
+        </form>
+        <div id="error-message" class="error"></div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <!-- <div class="column col">
+                <h5>Exclusive</h5>
+                <h6>Subscribe</h6>
+                <div class="subscribe">
+                    <input type="email" placeholder="Enter your email">
+                    <button><i class="fas fa-paper-plane"></i></button>
+                </div>
+                <p>Get 10% off your first order</p>
+            </div> -->
+            <div class="column col">
+                <div class="footer-header">
+                    <h5>Support</h5>
+                    <img src="images/right-arrow.png" alt="" class="right-arrow">
+                </div>
+                <ul>
+                    <li>Arbaminch Main Campus</li>
+                    <li>@Musteshemsudin</li>
+                    <li>musteshemsu@gmail.com</li>
+                    <li>Phone +251963764285</li>
+                </ul>
+                
+            </div>
+            <div class="column col">
+                <div class="footer-header">
+                    <h5>Account</h5>
+                    <img src="images/right-arrow.png" alt="" class="right-arrow">
+                </div>
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Login / Register</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </div>
+            <div class="column col">
+                <div class="footer-header">
+                    <h5>Quick Link</h5>
+                    <img src="images/right-arrow.png" alt="" class="right-arrow" onclick="display()">
+                </div>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="column col">
+                <h5>Download App</h5>
+                
+                <!-- <p>Save multiple Dollars for New App User Only</p> -->
+                <div class="app-stores">
+                    <div class="qr-code">
+                        <img src="images/qr-code.jpg" alt="Google Play">
+                    </div>
+                    <div class="app-play">
+                      <img src="images/playstore.png" alt="App Store">
+                      <img src="images/appstore.png" alt="">
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; Copyright Gafi 2025 All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("error-message");
+
+            // Replace with your actual authentication logic
+            if (username === "username" && password === "password") {
+                // Successful login
+                // Redirect to the desired page
+                window.location.href = "home.html"; // Replace with the actual URL
+            } else {
+                errorMessage.textContent = "Invalid username or password.";
+            }
+        }
+    </script>
+</body>
+</html>

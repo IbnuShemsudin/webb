@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exclusive Header</title>
+
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../index.css">
+  
+    <link rel="stylesheet" href="signUp.css">
+    <link rel="stylesheet" href="../footer.css">
+
+</head>
+<body>
+
+ <!--this header-->
+ 
+<header id="head">
+  <div class="left-head">
+      <h3>Exclusive</h3>
+  </div>
+  <div class="mid-head">
+      <ul>
+          <li> <a href="#">Home</a></li>
+          <li> <a href="#">Contact</a></li>
+          <li> <a href="../about/about.html">About</a></li>
+          <li> <a href="../signUp/SignUp.html">SignUp</a></li>
+          <li> <a href="../product.html">Products</a></li>
+      </ul>
+  </div>
+  <div class="right-head">
+      <div class="what-look">
+          <a href="#">
+              <input type="text" placeholder="What are you looking for ?" class="searchBtn">
+              <img src="../photos/search-interface-symbol.png" alt="search" class="searchimg">
+          </a>
+      </div>
+      <div class="cartAndLike">
+      <a href="#"><img src="../photos/shopping-cart.png" alt="add cart" class="lov-cart"></a>
+      </div>
+  </div>
+  <div class="menu">
+      <img src="../photos/menu.png" alt="menu icon" class="menu-icon">
+  </div>
+</header>
+
+  <!-- section   -->
+
+<section class="account-page">
+  <!-- <div class="major-trouser">
+    <img src="images/iphone.png" alt="">
+  </div> -->
+   <div class="acc-form-container">
+        <h2>Create an account</h2>
+        <p>Enter your details below</p>
+        <form id="accountForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required class="text-form">
+
+            <label for="email">Email or Phone Number:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+  
+            <button type="submit">Create Account</button>
+        </form>
+
+        <button class="google-btn">
+            <img class="google-icon" src="images/google-icon.png" alt="Google Logo"> 
+            Sign up with Google
+        </button>
+
+        <p>Already have an account? <a href="login.html" id="login">Log in</a></p>
+
+        <p id="message"></p> 
+    </div>
+</section>
+
+    <!-- footer  -->
+
+    <footer class="footer">
+      <div class="container">
+          <!-- <div class="column col">
+              <h5>Exclusive</h5>
+              <h6>Subscribe</h6>
+              <div class="subscribe">
+                  <input type="email" placeholder="Enter your email">
+                  <button><i class="fas fa-paper-plane"></i></button>
+              </div>
+              <p>Get 10% off your first order</p>
+          </div> -->
+          <div class="column col">
+              <div class="footer-header">
+                  <h5>Support</h5>
+                  <img src="../signUp/images/right-arrow.png" alt="" class="right-arrow">
+              </div>
+              <ul>
+                  <li>Arbaminch Main Campus</li>
+                  <li>@Musteshemsudin</li>
+                  <li>musteshemsu@gmail.com</li>
+                  <li>Phone +251963764285</li>
+              </ul>
+              
+          </div>
+          <div class="column col">
+              <div class="footer-header">
+                  <h5>Account</h5>
+                  <img src="../signUp/images/right-arrow.png" alt="" class="right-arrow">
+              </div>
+              <ul>
+                  <li><a href="#">My Account</a></li>
+                  <li><a href="#">Login / Register</a></li>
+                  <li><a href="#">Cart</a></li>
+                  <li><a href="#">Wishlist</a></li>
+                  <li><a href="#">Shop</a></li>
+              </ul>
+          </div>
+          <div class="column col">
+              <div class="footer-header">
+                  <h5>Quick Link</h5>
+                  <img src="../signUp/images/right-arrow.png" alt="" class="right-arrow" onclick="display()">
+              </div>
+              <ul>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms Of Use</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+          </div>
+          <div class="column col">
+              <h5>Download App</h5>
+              
+              <!-- <p>Save multiple Dollars for New App User Only</p> -->
+              <div class="app-stores">
+                  <div class="qr-code">
+                      <img src="../signUp/images/qr-code.jpg" alt="Google Play">
+                  </div>
+                  <div class="app-play">
+                    <img src="../signUp/images/playstore.png" alt="App Store">
+                    <img src="../signUp/images/appstore.png" alt="">
+                  </div>
+              </div>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+      <p class="copyright">&copy; Copyright Gafi 2025 All rights reserved.</p>
+  </footer>
+    
+    <script>
+        const form = document.getElementById('accountForm');
+        const message = document.getElementById('message');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Simulate account creation (replace with actual server-side logic)
+            if (name && email && password) {
+                message.textContent = 'Account created successfully!';
+                form.reset(); // Clear the form fields
+            } else {
+                message.textContent = 'Please fill in all fields.';
+            }
+        });
+    </script>
+</body>
+</html>
