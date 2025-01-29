@@ -1,0 +1,435 @@
+/* style.css */
+
+/* Basic styles for page elements */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Header Styles */
+#head {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 100;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-head,
+.mid-head,
+.right-head {
+    display: flex;
+    align-items: center;
+}
+
+.mid-head ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.mid-head li {
+    margin-left: 20px;
+}
+
+.mid-head a {
+    color: #333;
+}
+
+.what-look {
+    display: flex;
+    align-items: center;
+}
+
+.searchBtn {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.searchimg {
+    margin-left: -25px;
+    cursor: pointer;
+}
+
+.cartAndLike {
+    cursor: pointer;
+}
+
+.menu {
+    cursor: pointer;
+    display: none; /* Hidden on larger screens */
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.hidden-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.hidden-menu ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.hidden-menu li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.hidden-menu a {
+    color: #333;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url("./photos/apple14pro.png");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.hero.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-text {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 2;
+    }
+}
+
+.promotion-heading {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.promotion-heading.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Product Styles */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.section .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.product {
+    width: 23%; /* Adjust as needed */
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.product.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+
+.product h5 {
+    margin-bottom: 5px;
+}
+
+.product .price {
+    color: #888;
+}
+
+.product .price span {
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+/* Numbers and About Delivery Sections */
+.numbers,
+.about-delivery {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 2s ease;
+    display: flex;
+    justify-content: space-around;
+    padding: 100px;
+}
+
+.numbers.visible,
+.about-delivery.visible {
+    opacity: 1;
+    transform: translateY(1);
+}
+
+.number {
+    text-align: center;
+    position: relative;
+}
+
+.number .num {
+    font-size: 70px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.number canvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+}
+
+.service {
+    text-align: center;
+    width: 30%;
+    align-items: center;
+}
+
+.service img {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Back to Top Styles */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    opacity: 0.7;
+    transition: opacity 0.8s ease;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}
+
+.back-to-top img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.column {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+.footer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.footer-header h5 {
+    margin: 0;
+}
+
+.right-arrow {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.column li {
+    margin-bottom: 10px;
+}
+
+.column a {
+    color: white;
+    text-decoration: none;
+}
+
+.app-stores {
+    display: flex;
+}
+
+.qr-code {
+    margin-right: 10px;
+}
+
+.qr-code img {
+    width: 80px;
+    height: 80px;
+}
+
+.app-play img {
+    width: 120px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.social-icons {
+    display: flex;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .product {
+        width: 45%;
+    }
+
+    .service {
+        width: 45%;
+    }
+
+    .column {
+        width: 45%;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .mid-head {
+        display: none;
+    }
+
+    .hidden-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .hidden-menu ul {
+        list-style: none;
+        padding: 10px;
+        margin: 0;
+    }
+
+    .hidden-menu li {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .hidden-menu a {
+        color: #333;
+    }
+}
+
+@media (max-width: 500px) {
+    .product {
+        width: 100%;
+    }
+
+    .service {
+        width: 100%;
+    }
+
+    .column {
+        width: 100%;
+    }
+}
